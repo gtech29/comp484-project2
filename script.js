@@ -12,16 +12,23 @@ $(function () {
 });
 
 // Add a variable "pet_info" equal to a object with the name (string), weight (number), and happiness (number) of your pet
-var pet_info = { name: "ZORP", weight: "??", happiness: "??" };
+var pet_info = { name: "ZORP", hunger: 5, mood: 5, energy: 5, age: 0 };
 
 function clickedFeedButton() {
-  // Increase pet happiness
-  // Increase pet weight
-  checkAndUpdatePetInfoInHtml();
+  if (pet_info['hunger'] == 0){
+    $(".speech-bubble").text("Zorp is full");
+  } else {
+    $(".speech-bubble").text("*munch munch*");
+    pet_info['mood']++
+    pet_info["hunger"]--;
+    pet_info["energy"]++;
+  }
+    checkAndUpdatePetInfoInHtml();
 }
 
 function clickedPlayButton() {
   // Increase pet happiness
+  
   // Decrease pet weight
   checkAndUpdatePetInfoInHtml();
 }
@@ -48,7 +55,8 @@ function checkWeightAndHappinessBeforeUpdating() {
 
 // Updates your HTML with the current values in your pet_info object
 function updatePetInfoInHtml() {
-  $(".name").text(pet_info["name"]);
-  $(".weight").text(pet_info["weight"]);
-  $(".happiness").text(pet_info["happiness"]);
+  $(".pet-name").text(pet_info["name"]);
+  $(".hunger-val").text(pet_info["hunger"]);
+  $(".mood-val").text(pet_info["mood"]);
+  $(".energy-val").text(pet_info["energy"]);
 }
