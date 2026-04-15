@@ -20,20 +20,33 @@
   </header>
 
   <main class="page-wrapper">
-
     <div class="device-wrapper">
 
       <!-- screen -->
       <section class="screen">
         <img class="pet-image" src="./images/zorp-normal.png">
         <span class="pet-name"></span>
-        <span class="pet-subtitle"></span>
+        <span class="pet-subtitle">ALIEN PET</span>
         <div class="speech-bubble"></div>
       </section>
 
       <!-- stats -->
       <section class="stats-panel">
-
+        <!-- happiness and weight are required pet_info keys per project spec -->
+        <div class="stat-row">
+          <span class="stat-label">HAPPY</span>
+          <div class="stat-bar-bg">
+            <div class="stat-bar-fill happiness-fill"></div>
+          </div>
+          <span class="stat-value happiness-val">0</span>
+        </div>
+        <div class="stat-row">
+          <span class="stat-label">WEIGHT</span>
+          <div class="stat-bar-bg">
+            <div class="stat-bar-fill weight-fill"></div>
+          </div>
+          <span class="stat-value weight-val">0</span>
+        </div>
         <div class="stat-row">
           <span class="stat-label">HUNGER</span>
           <div class="stat-bar-bg">
@@ -41,15 +54,6 @@
           </div>
           <span class="stat-value hunger-val">0</span>
         </div>
-
-        <div class="stat-row">
-          <span class="stat-label">MOOD</span>
-          <div class="stat-bar-bg">
-            <div class="stat-bar-fill mood-fill"></div>
-          </div>
-          <span class="stat-value mood-val">0</span>
-        </div>
-
         <div class="stat-row">
           <span class="stat-label">ENERGY</span>
           <div class="stat-bar-bg">
@@ -57,12 +61,10 @@
           </div>
           <span class="stat-value energy-val">0</span>
         </div>
-
         <div class="stat-row">
           <span class="stat-label">AGE</span>
           <span class="stat-value age-val">0</span>
         </div>
-
       </section>
 
       <!-- buttons -->
@@ -75,12 +77,14 @@
 
       <!-- decorative dots -->
       <div class="device-dots">
+        <span></span>
         <span class="active"></span>
         <span class="active"></span>
+        <span></span>
+        <span></span>
       </div>
 
     </div>
-
   </main>
 
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"

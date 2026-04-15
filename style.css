@@ -141,8 +141,12 @@ main {
   background-color: #6aaa4a;
 }
 
-.mood-fill {
+.happiness-fill {
   background-color: #4aaa8a;
+}
+
+.weight-fill {
+  background-color: #aa7a4a;
 }
 
 .energy-fill {
@@ -200,4 +204,18 @@ main {
 
 .device-dots span.active {
   background-color: #4a9a4a;
+}
+/* sad-mode is toggled via jQuery's .addClass() when Zorp's happiness drops
+   below 3, shifting the color palette to visually show Zorp is unhappy */
+.device-wrapper.sad-mode {
+  background-color: #2a3a4a;
+  box-shadow: inset 0 0 0 4px #3a4a6a;
+}
+
+.device-wrapper.sad-mode .screen {
+  background-color: #b0c8d8;
+}
+
+.device-wrapper.sad-mode .stats-panel {
+  background-color: #1e2a3a;
 }
